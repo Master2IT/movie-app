@@ -37,7 +37,7 @@
               ></span>
               <span class="mx-2">|</span>
               {{ list.value }}
-              <span class="text-sm ml-1">({{ list.vote_count }})</span>
+              <span class="text-sm ml-1">({{ list.vote_count }} votes)</span>
             </div>
             <span v-else>{{ list.value }}</span>
           </li>
@@ -70,7 +70,7 @@ export default {
     return {
       details: {},
       lists: [],
-      loading: false,
+      loading: true,
       overview: "",
       credits: [],
     };
