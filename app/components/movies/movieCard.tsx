@@ -28,8 +28,8 @@ const MovieCard = ({ movie }) => {
         </Link>
         <h3 className="font-bold pr-4 items-center pt-1">{movie.title_long}</h3>
       </div>
-      <div className="relative z-10 top-10">
-        <div className="card-body px-5">
+      <div className="relative z-10 top-10 w-screen">
+        <div className="card-body px-5 w-full">
           {/* <VideoPlayer
                             file={movie.torrents[0].url}
                             options={videoPlayerOptions}
@@ -56,7 +56,7 @@ const MovieCard = ({ movie }) => {
           </p>
 
           <h1 className="mt-10 divider">Download links</h1>
-          <div className="card-actions grid grid-cols-2 gap-2">
+          <div className="card-actions grid grid-cols-2 md:grid-cols-4 gap-2">
             {movie?.torrents.map((torrent) => (
               <a
                 href={torrent.url}
