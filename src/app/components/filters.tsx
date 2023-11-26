@@ -41,7 +41,7 @@ const Filters = () => {
   };
 
   useEffect(() => {
-    setSelectedSort(searchParams.get("sort_by"));
+    setSelectedSort(searchParams.get("sort_by") || "");
   }, []);
   return (
     <div className="flex items-center justify-between">
