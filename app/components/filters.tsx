@@ -37,7 +37,7 @@ const Filters = () => {
   const onSort = (sort: string) => {
     setSelectedSort(sort);
     searchParams.set("sort_by", sort);
-    router.push(pathName + `?${searchParams}`);
+    router.replace(pathName + `?${searchParams}`);
   };
 
   useEffect(() => {

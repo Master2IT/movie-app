@@ -1,12 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 my-3">
+    <div className="navbar bg-base-100 items-start my-3">
       <div className="navbar-start">
-        <Link className="pl-2 tracking-wide" href="/">
-          <h1 className="text-lg font-bold">FiFi Movie</h1>
-          <p className="text-xs text-gray-500">Watch and explore online</p>
+        <Link className="pl-2 tracking-wide flex gap-3" href="/">
+          <Image
+            src="/images/logo.png"
+            alt="fifi movie"
+            width={64}
+            height={64}
+          />
+          <div className="w-56">
+            <h1 className="text-lg font-bold">FiFi Movie</h1>
+            <p className="text-xs text-gray-500">Watch and explore online</p>
+          </div>
         </Link>
       </div>
       <div className="navbar-end">
