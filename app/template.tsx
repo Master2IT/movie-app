@@ -8,8 +8,8 @@ import { useParams, usePathname } from "next/navigation";
 const Template = ({ children }) => {
   const params = useParams();
   const pathName = usePathname();
-  const isNotShowInMovieDetails =
-    pathName.search("/movies/") == -1 && !params.id;
+  const pages = ["/movies/", "/search"];
+  const isNotShowInMovieDetails = !pages.includes(pathName) && !params.id;
   return (
     <>
       {isNotShowInMovieDetails && (

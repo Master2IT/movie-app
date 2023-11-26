@@ -1,13 +1,5 @@
-import React from "react";
+const MovieLayout = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>;
+};
 
-const MovieLayout = ({children}: { children: React.ReactNode }) => {
-    return (
-        <>
-            {
-                children
-            }
-        </>
-    )
-}
-
-export default MovieLayout
+export default MovieLayout;

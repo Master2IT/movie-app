@@ -20,6 +20,10 @@ const Filters = () => {
       value: "date_added",
     },
     {
+      title: "Like Count",
+      value: "like_count",
+    },
+    {
       title: "Year",
       value: "year",
     },
@@ -92,7 +96,7 @@ const BadgeContent = (props) => {
   const router = useRouter();
   const pathName = usePathname();
   const handleRemoveFilter = (selectedTitle: string) => {
-    const sortByItems = ["date_added", "year", "rating"];
+    const sortByItems = ["like_count", "date_added", "year", "rating"];
     if (sortByItems.includes(selectedTitle)) {
       searchParams.set("sort_by", "date_added");
       props.onClose();
