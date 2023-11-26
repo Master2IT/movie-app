@@ -13,20 +13,20 @@ const VideoPlayer = (props) => {
   }, []);
 
   const initPlayer = () => {
-    if (typeof window != undefined) {
+    if (typeof window != undefined && "webtor" in window) {
       window.webtor = window.webtor || [];
 
-      window.webtor.push({
-        id: "player",
-        width: "100%",
-        // magnet: props.file,
-        torrentUrl: props.file,
-        on: function (e) {
-          if (e.name == window.webtor.INITED) {
-            e.player.play();
-          }
-        },
-      });
+      // window.webtor.push({
+      //   id: "player",
+      //   width: "100%",
+      //   // magnet: props.file,
+      //   torrentUrl: props.file,
+      //   on: function (e) {
+      //     if (e.name == window.webtor.INITED) {
+      //       e.player.play();
+      //     }
+      //   },
+      // });
     }
   };
 

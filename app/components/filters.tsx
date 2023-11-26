@@ -1,6 +1,6 @@
 "use client";
 
-import FilterIcon from "@/app/components/icons/filter.icon";
+import FilterIcon from "@/components/icons/filter.icon";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 

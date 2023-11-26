@@ -1,7 +1,7 @@
 "use client";
 
-import BackIcon from "@/app/components/icons/back.icon";
-import DownloadIcon from "@/app/components/icons/download.icon";
+import BackIcon from "@/components/icons/back.icon";
+import DownloadIcon from "@/components/icons/download.icon";
 import VideoIcon from "../icons/video.icon";
 import Link from "next/link";
 
@@ -83,7 +83,7 @@ const MovieCard = ({ movie }) => {
 const Rating = ({ rate = 1 }: { rate: number }) => {
   return (
     <div className="rating rating-sm">
-      {[...Array(5).keys()].map((i) => (
+      {Array.from(Array(5).keys()).map((i) => (
         <input
           type="radio"
           className="mask mask-star-2 bg-yellow-500"

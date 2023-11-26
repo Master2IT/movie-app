@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Movie from "@/app/components/movies/movie";
+import Movie from "@/components/movies/movie";
 
 const MovieCarousel = ({
   title,

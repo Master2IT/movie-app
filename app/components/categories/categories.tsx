@@ -1,4 +1,4 @@
-import Category from "@/app/components/categories/category";
+import Category from "@/components/categories/category";
 
 const Categories = () => {
   const data = [

@@ -1,5 +1,5 @@
-import MovieCarousel from "@/app/components/movies/movieCarousel";
-import Categories from "@/app/components/categories/categories";
+import MovieCarousel from "@/components/movies/movieCarousel";
+import Categories from "@/components/categories/categories";
 
 const getMovies = async () => {
   const response = await fetch(

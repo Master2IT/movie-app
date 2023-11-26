@@ -1,7 +1,7 @@
 import Image from "next/image";
-import StarIcon from "@/app/components/icons/star.icon";
+import StarIcon from "@/components/icons/star.icon";
 import Link from "next/link";
-import VideoIcon from "@/app/components/icons/video.icon";
+import VideoIcon from "@/components/icons/video.icon";
 import moment from "moment";
 
 const Movie = ({ movie, type }) => {
