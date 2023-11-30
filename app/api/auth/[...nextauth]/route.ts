@@ -20,7 +20,7 @@ const handler = NextAuth({
 
             return session
         },
-        async signIn({profile}) {
+        async signIn({profile}: { profile: any }) {
             try {
                 await connectToDB()
                 const userExists = await User.findOne({email: profile.email});
