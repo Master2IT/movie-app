@@ -1,7 +1,9 @@
-const Profile = () => {
+import Profile from "@components/Profile";
+
+const UserProfile = () => {
     return (
-        <>Profile</>
+        <Profile/>
     )
 }
 
-export default Profile
+export default UserProfile
