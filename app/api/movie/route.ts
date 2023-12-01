@@ -19,7 +19,6 @@ export const GET = async (req) => {
         if (genre) params["genre"] = genre
 
         const url = new URLSearchParams(params)
-        console.log(url)
         const moviesResponse = await fetch(`https://yts.mx/api/v2/list_movies.json?${url}`);
         const moviesData = await moviesResponse.json()
         const moviesList: any[] = moviesData.data.movies;
