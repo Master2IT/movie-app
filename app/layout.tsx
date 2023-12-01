@@ -19,8 +19,6 @@ export default function RootLayout({
                                    }: {
     children: React.ReactNode;
 }) {
-    // @ts-ignore
-    // @ts-ignore
     return (
         <html lang="en" data-theme="mytheme">
         <head>
