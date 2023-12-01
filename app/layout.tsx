@@ -41,7 +41,6 @@ export default function RootLayout({
         <Script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5595968868369218"
                 crossOrigin="anonymous"></Script>
-        <!-- Google tag (gtag.js) -->
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-P0TKX7R77S"></Script>
         <Script>
             window.dataLayer = window.dataLayer || [];
