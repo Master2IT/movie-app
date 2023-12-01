@@ -10,7 +10,7 @@ const MovieCarousel = ({
     title: string;
     movies: any[];
     seeAllLink?: string;
-    className: string
+    className?: string
 }) => {
     return (
         <div className={`mt-10 ${className}`}>
