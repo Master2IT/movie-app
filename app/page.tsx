@@ -17,6 +17,21 @@ const getDiscoverMovies = async () => {
     return response.json();
 };
 
+if (typeof window != 'undefined') {
+    window.dataLayer = window.dataLayer || []
+
+    // @ts-ignore
+    function gtag() {
+        typeof window !== "undefined" && window.dataLayer.push(arguments)
+    }
+
+// @ts-ignore
+    gtag('js', new Date());
+
+// @ts-ignore
+    gtag('config', 'G-P0TKX7R77S');
+}
+
 export default async function Home() {
     return (
         <div className="md:px-32">

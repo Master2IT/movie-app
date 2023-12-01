@@ -4,7 +4,7 @@ import "./globals.css";
 import React from "react";
 import Provider from "../components/Provider";
 import {Analytics} from '@vercel/analytics/react';
-import Script from "@node_modules/next/dist/client/script";
+import Script from "next/script";
 
 
 const montserrat = Montserrat({subsets: ["latin"]});
@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     title: "FiFi Movie",
     description: "Watch and explore online with FiFi Movie",
 };
+
+declare global {
+    interface Window {
+        dataLayer: Record<string, any>[];
+    }
+}
 
 export default function RootLayout({
                                        children,
@@ -31,7 +37,7 @@ export default function RootLayout({
             {children}
         </Provider>
         <Analytics/>
-        </body>
+
         <Script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5595968868369218"
                 crossOrigin="anonymous"></Script>
@@ -42,13 +48,7 @@ export default function RootLayout({
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5595968868369218"
                 crossOrigin="anonymous"></Script>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-P0TKX7R77S"></Script>
-        <Script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window["dataLayer"].push(arguments)}
-            gtag('js', new Date());
-
-            gtag('config', 'G-P0TKX7R77S');
-        </Script>
+        </body>
         </html>
     );
 }
