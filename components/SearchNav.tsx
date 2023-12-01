@@ -23,7 +23,7 @@ function SearchNav() {
             setDebouncedValue(searchText);
         }, 1000);
         return () => clearTimeout(timeoutId);
-    }, [searchText, 1000]);
+    }, [searchText, 2000]);
 
     useEffect(() => {
         if (debouncedValue) {

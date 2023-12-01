@@ -4,7 +4,7 @@ import StarIcon from "@components/icons/star.icon";
 import Image from "next/image";
 import Link from "next/link";
 import {useSearchParams} from "next/navigation";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 function Search() {
@@ -12,30 +12,33 @@ function Search() {
     const params = new URLSearchParams(searchParams.toString());
     const search = params.get("search");
     const [movies, setMovies] = useState([]);
-    const [page, setPage] = useState(1);
+    // const [page, setPage] = useState(1);
+    const page = useRef(1)
 
     const fetchData = async () => {
         const response = await fetch(
-            `https://yts.mx/api/v2/list_movies.json?query_term=${search.toLowerCase().trim()}&sort_by=download_count&page=${page}`
+            `https://yts.mx/api/v2/list_movies.json?query_term=${search.toLowerCase().trim()}&sort_by=download_count&page=${page.current}`
         );
         const data: any = await response.json();
-        if (page == 1) {
+        if (page.current == 1) {
             setMovies(data?.data?.movies);
         } else {
             setMovies(movies.concat(data?.data?.movies || []));
         }
-        setPage((prev) => prev + 1);
+        page.current += 1;
+
+        console.log(page)
     };
 
     useEffect(() => {
-        setPage(1);
+        page.current = 1
 
         if (search) {
             fetchData();
         } else {
             setMovies([]);
         }
-    }, [searchParams]);
+    }, [search]);
 
     return (
         <div>
