@@ -10,7 +10,7 @@ export const GET = async (req) => {
 
     try {
         await connectToDB()
-        const params = {
+        const params: any = {
             with_rt_ratings,
             page,
         }

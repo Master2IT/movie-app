@@ -7,7 +7,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import {useSession} from "next-auth/react";
 
 function MovieList() {
-    const {data: session} = useSession()
+    const {data: session}: any = useSession()
     const param = useSearchParams();
     const [movies, setMovies] = useState([]);
     const [page, setPage] = useState(1);
@@ -20,7 +20,7 @@ function MovieList() {
             `/api/movie?${params}`,
             {
                 headers: {
-                    userId: session?.user.id
+                    userId: session?.user?.id
                 }
             }
         );
