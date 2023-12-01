@@ -19,6 +19,8 @@ export default function RootLayout({
                                    }: {
     children: React.ReactNode;
 }) {
+    // @ts-ignore
+    // @ts-ignore
     return (
         <html lang="en" data-theme="mytheme">
         <head>
@@ -41,6 +43,16 @@ export default function RootLayout({
         <Script async
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5595968868369218"
                 crossOrigin="anonymous"></Script>
+        <!-- Google tag (gtag.js) -->
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-P0TKX7R77S"></Script>
+        <Script>
+            window.dataLayer = window.dataLayer || [];
+            {/*@ts-ignore*/}
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date());
+
+            gtag('config', 'G-P0TKX7R77S');
+        </Script>
         </html>
     );
 }
