@@ -36,7 +36,7 @@ if (typeof window != 'undefined') {
 export default async function Home() {
     return (
         <div className="md:px-32">
-            <ADS/>
+            <ADS type={1}/>
             <Categories/>
             <NewMovies/>
             <DiscoverMovies/>

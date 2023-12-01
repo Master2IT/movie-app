@@ -42,7 +42,7 @@ const MovieCard = ({movie}) => {
                     <HomeIcon width="1.5em" height="1.5em"/>
                 </Link>
             </div>
-            <ADS/>
+            <ADS type={1}/>
             <div
                 className="card md:flex-row md:items-start md:mt-10"
             >
@@ -99,7 +99,6 @@ const MovieCard = ({movie}) => {
                 <DownloadLinks movie={movie}/>
             </div>
             <Related/>
-            <ADS/>
         </section>
     );
 };

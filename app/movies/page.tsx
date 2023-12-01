@@ -8,7 +8,7 @@ const MoviesPage = () => {
         <div className="md:px-32">
             <Filters/>
             <div className="divider"></div>
-            <ADS/>
+            <ADS type={1}/>
             <MovieList/>
         </div>
     );
