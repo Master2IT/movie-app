@@ -1,5 +1,6 @@
 import MovieCarousel from "@components/movies/movieCarousel";
 import Categories from "@components/categories/categories";
+import React from "react";
 
 const getMovies = async () => {
     const response = await fetch(
@@ -19,9 +20,41 @@ const getDiscoverMovies = async () => {
 export default async function Home() {
     return (
         <div className="md:px-32">
+            <ins className="adsbygoogle"
+                 style={{
+                     display: 'inline-block',
+                     width: '728px',
+                     height: '90px'
+                 }}
+                 data-ad-client="ca-pub-5595968868369218"
+                 data-ad-slot="5271167652"></ins>
             <Categories/>
+            <ins className="adsbygoogle"
+                 style={{
+                     display: 'inline-block',
+                     width: '728px',
+                     height: '90px'
+                 }}
+                 data-ad-client="ca-pub-5595968868369218"
+                 data-ad-slot="5271167652"></ins>
             <NewMovies/>
+            <ins className="adsbygoogle"
+                 style={{
+                     display: 'inline-block',
+                     width: '728px',
+                     height: '90px'
+                 }}
+                 data-ad-client="ca-pub-5595968868369218"
+                 data-ad-slot="5271167652"></ins>
             <DiscoverMovies/>
+            <ins className="adsbygoogle"
+                 style={{
+                     display: 'inline-block',
+                     width: '728px',
+                     height: '90px'
+                 }}
+                 data-ad-client="ca-pub-5595968868369218"
+                 data-ad-slot="5271167652"></ins>
         </div>
     );
 }
