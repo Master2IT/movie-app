@@ -43,6 +43,7 @@ export default function RootLayout({
                 crossOrigin="anonymous"></Script>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-P0TKX7R77S"></Script>
         <Script>
+            {/*@ts-ignore*/}
             window.dataLayer = window.dataLayer || [];
             {/*@ts-ignore*/}
             function gtag(){dataLayer.push(arguments)}
