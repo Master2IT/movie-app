@@ -9,9 +9,10 @@ import 'videojs-youtube/dist/Youtube.min'
 import 'video.js/dist/video-js.css';
 import VideoPlayer from "@components/videoPlayer";
 import MovieCarousel from "@components/movies/movieCarousel";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import HomeIcon from "@components/icons/home.icon";
 import Link from "next/link";
+import ADS from "@components/ADS";
 
 const MovieCard = ({movie}) => {
     const router = useRouter()
@@ -41,6 +42,7 @@ const MovieCard = ({movie}) => {
                     <HomeIcon width="1.5em" height="1.5em"/>
                 </Link>
             </div>
+            <ADS/>
             <div
                 className="card md:flex-row md:items-start md:mt-10"
             >
@@ -97,6 +99,7 @@ const MovieCard = ({movie}) => {
                 <DownloadLinks movie={movie}/>
             </div>
             <Related/>
+            <ADS/>
         </section>
     );
 };

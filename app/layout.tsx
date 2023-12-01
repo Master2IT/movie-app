@@ -6,7 +6,6 @@ import Provider from "../components/Provider";
 import {Analytics} from '@vercel/analytics/react';
 import Script from "next/script";
 
-
 const montserrat = Montserrat({subsets: ["latin"]});
 
 export const metadata: Metadata = {
