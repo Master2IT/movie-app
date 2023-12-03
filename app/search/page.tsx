@@ -3,7 +3,7 @@ import React from "react";
 
 function SearchPage() {
     return (
-        <section className="px-32">
+        <section className="md:px-32">
             <Search/>
         </section>
     );
