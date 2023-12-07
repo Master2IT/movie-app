@@ -9,7 +9,7 @@ const Movies = ({movies}: { movies: any[] }) => {
         <div className="md:grid md:grid-cols-3 gap-3">
             {movies.map((movie, i) => (
                 <div>
-                    <ADS type={2}/>
+                    {/*<ADS type={2}/>*/}
                     <Movie type={1} movie={movie}/>
                 </div>
             ))}
