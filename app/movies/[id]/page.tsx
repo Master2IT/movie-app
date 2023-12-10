@@ -6,12 +6,12 @@ export async function generateMetadata({ params }) {
   ).then((res) => res.json());
 
   return {
-    title: movie.title_english + " | FiFi Movie",
-    desciption: movie.title_long,
+    title: movie?.title_english + " | FiFi Movie",
+    desciption: movie?.title_long,
     generator: "FiFi Movie",
     applicationName: "FiFi Movie",
     referrer: "origin-when-cross-origin",
-    keywords: [...movie.genres, ...movie.slug.split("-")],
+    keywords: [...movie?.genres, ...movie?.slug?.split("-")],
   };
 }
 
