@@ -8,10 +8,10 @@ export async function generateMetadata({ params }) {
   return {
     title: movie?.title_english + " | FiFi Movie",
     desciption: movie?.title_long,
-    generator: "FiFi Movie",
-    applicationName: "FiFi Movie",
-    referrer: "origin-when-cross-origin",
-    keywords: [...movie?.genres, ...movie?.slug?.split("-")],
+    // generator: "FiFi Movie",
+    // applicationName: "FiFi Movie",
+    // referrer: "origin-when-cross-origin",
+    // keywords: [...movie?.genres, ...movie?.slug?.split("-")],
   };
 }
 
